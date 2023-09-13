@@ -25,11 +25,6 @@ export class OrdersController {
     return this.ordersService.findAllOrders();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.ordersService.findOneOrder(+id);
-  }
-
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateOrderDto: UpdateOrderDto) {
     return this.ordersService.updateOrder(+id, updateOrderDto);

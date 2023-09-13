@@ -9,7 +9,7 @@ USE rgt;
 
 -- `product` 테이블 구조 생성
 CREATE TABLE product (
-  order_id INT(4) UNSIGNED ZEROFILL PRIMARY KEY AUTO_INCREMENT COMMENT '고유 식별자',
+  order_id VARCHAR(255),
   product_name VARCHAR(255) COMMENT '상품 이름',
   options VARCHAR(255),
   table_no INT,
