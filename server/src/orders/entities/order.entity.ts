@@ -1,9 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity()
+@Entity({ name: 'product', database: 'rgt' })
 export class Order {
   @PrimaryGeneratedColumn()
-  order_id = 0o0000; // 8진수 리터럴로 초기화
+  order_id?: string;
 
   @Column()
   product_name?: string;
