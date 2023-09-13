@@ -1,4 +1,3 @@
-// export class CreateOrderDto {}
 export class CreateOrderDto {
   order_id!: number;
 
