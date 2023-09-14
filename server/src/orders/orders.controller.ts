@@ -16,8 +16,12 @@ export class OrdersController {
   constructor(private readonly ordersService: OrdersService) {}
 
   @Post()
-  create(@Body() createOrderDto: CreateOrderDto) {
-    return this.ordersService.createOrder(createOrderDto);
+  async create(@Body() createOrderDto: CreateOrderDto) {
+    const result = await this.ordersService.createOrder(createOrderDto);
+    const savedOrder = await result.value;
+    const orderID = await result.order_id;
+    const returnMessage = `주문번호 : ${orderID} : 수신`;
+    return { savedOrder, returnMessage };
   }
 
   @Get()

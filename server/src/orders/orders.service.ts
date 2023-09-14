@@ -48,7 +48,8 @@ export class OrdersService {
     }
 
     const order = await this.orderRepository.create(createOrderDto);
-    return this.orderRepository.save(order);
+    const saveOrder = await this.orderRepository.save(order);
+    return { value: saveOrder, order_id: saveOrder.order_id };
   }
 
   async findAllOrders() {
