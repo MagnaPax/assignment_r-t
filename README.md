@@ -62,3 +62,7 @@
 
 - 로그인
 ```
+
+## Google OAuth 로그인
+
+<img width="700" alt="oauth_google" src="https://github.com/MagnaPax/assignment_r-t/assets/34564706/b4ba76e6-9fd5-4b99-a399-2a17386197c3">
