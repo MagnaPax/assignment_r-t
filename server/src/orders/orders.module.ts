@@ -9,7 +9,5 @@ import { Order } from './entities/order.entity';
   imports: [TypeOrmModule.forFeature([Order])],
   controllers: [OrdersController],
   providers: [OrdersService],
-  // 외부에서 사용케 하기 위해
-  // exports: [TypeOrmModule],
 })
 export class OrdersModule {}
